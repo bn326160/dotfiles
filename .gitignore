@@ -1,0 +1,10 @@
+# .gitignore
+result/
+result-*
+.#*
+*~
+*.swp
+.DS_Store
+
+# Allow flake.lock (don't ignore it)
+# !nix/flake.lock
