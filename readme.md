@@ -12,9 +12,9 @@ git clone https://github.com/brambeirens/dotfiles.git ~/.dotfiles
 
 ## Structure
 
-- `nix/` - NixOS and Home Manager configurations
+- `nix/` - macOS and nix-darwin configurations
 
 ## Requirements
 
 - [Nix](https://nixos.org)
-- [Home Manager](https://github.com/nix-community/home-manager)
+- [nix-darwin](https://github.com/LnL7/nix-darwin)

@@ -39,6 +39,7 @@
           pkgs.the-unarchiver
           pkgs.mas
           pkgs.shottr
+          pkgs.orbstack
         ];
 
       homebrew = {
@@ -47,10 +48,19 @@
         ];
         casks = [
           "1password"
+          "raindropio"
+          "autodesk-fusion"
+          "orcaslicer"
+          # "lm-studio" # Requires Apple Silicon
+          "tower"
+          "remote-desktop-manager"
+          "omnigraffle"
+          "sublime-text" # pkgs.sublimetext4 doesn't exist in the nixpkgs-unstable channel
         ];
         masApps = {
           "Trello" = 1278508951;
           "HEIC Converter" = 1294126402;
+          "Structured" = 1499198946;
         };
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;
@@ -60,6 +70,28 @@
       fonts.packages = [
         pkgs.jetbrains-mono
       ];
+
+      system.defaults = {
+        dock.orientation = "left";
+        dock.persistent-apps = [
+          "/System/Applications/Launchpad.app"
+          "/Applications/Safari.app"
+          "/System/Applications/Messages.app"
+          "/System/Applications/Maps.app"
+          "/System/Applications/Photos.app"
+          "/System/Applications/FaceTime.app"
+          "/System/Applications/Calendar.app"
+          "/System/Applications/Contacts.app"
+          "/System/Applications/Reminders.app"
+          "/System/Applications/Notes.app"
+          "/System/Applications/Freeform.app"
+          "/System/Applications/TV.app"
+          "/System/Applications/Music.app"
+          "/System/Applications/App Store.app"
+          "/System/Applications/System Settings.app"
+        ];
+        loginwindow.GuestEnabled = false;
+      };
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
