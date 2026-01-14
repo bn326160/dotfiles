@@ -75,19 +75,26 @@
         dock.orientation = "left";
         dock.persistent-apps = [
           "/System/Applications/Launchpad.app"
-          "/Applications/Safari.app"
+          "/System/Applications/Home.app"
+          "/Applications/1Password.app"
+          "${pkgs.firefox}/Applications/Firefox.app"
+          "/Applications/Raindrop.io.app"
           "/System/Applications/Messages.app"
-          "/System/Applications/Maps.app"
-          "/System/Applications/Photos.app"
-          "/System/Applications/FaceTime.app"
+          # Todo: Photos alternative
           "/System/Applications/Calendar.app"
+          "/Applications/Structured.app"
           "/System/Applications/Contacts.app"
           "/System/Applications/Reminders.app"
+          "/Applications/Trello.app"
           "/System/Applications/Notes.app"
-          "/System/Applications/Freeform.app"
-          "/System/Applications/TV.app"
           "/System/Applications/Music.app"
-          "/System/Applications/App Store.app"
+          "/Users/brambeirens/Applications/Autodesk Fusion.app"
+          "/Applications/OrcaSlicer.app"
+          "${pkgs.warp-terminal}/Applications/Warp.app"
+          "/Applications/Sublime Text.app"
+          "${pkgs.vscode}/Applications/Visual Studio Code.app"
+          "/Applications/Tower.app"
+          "/Applications/Remote Desktop Manager.app"
           "/System/Applications/System Settings.app"
         ];
         loginwindow.GuestEnabled = false;
