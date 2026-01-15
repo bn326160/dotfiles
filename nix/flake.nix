@@ -29,7 +29,6 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
         [
-          pkgs.vim
           pkgs.warp-terminal
           pkgs.mkalias
           pkgs.obsidian
@@ -39,7 +38,28 @@
           pkgs.the-unarchiver
           pkgs.mas
           pkgs.shottr
-          pkgs.orbstack
+          #pkgs.orbstack
+          #pkgs.azure-cli
+          pkgs.fish
+          #pkgs.handbrake
+          #pkgs.terraform
+          #pkgs.imagemagick
+          #pkgs.ffmpeg
+          #pkgs.nmap
+          #pkgs.pyenv
+          #pkgs.qemu
+          #pkgs.rclone
+          pkgs.screenfetch
+          pkgs.starship
+          pkgs.talosctl
+          pkgs.tree
+          pkgs.wget
+          pkgs.spacenavd
+          pkgs.aerospace
+          pkgs.teams
+          pkgs.monitorcontrol
+          pkgs.rapidapi
+          pkgs.wireguard-ui
         ];
 
       homebrew = {
@@ -56,11 +76,24 @@
           "remote-desktop-manager"
           "omnigraffle"
           "sublime-text" # pkgs.sublimetext4 doesn't exist in the nixpkgs-unstable channel
+          "balenaetcher"
+          "balsamiq-wireframes"
+          #"draw-things"
+          "dymo-connect"
+          "gemini"
+          #"live-home-3d"
+          "linearmouse"
+          "dropbox" # macOS x64 not supported in nixpkgs-unstable channel, install via homebrew
+          "daisydisk"
         ];
         masApps = {
           "Trello" = 1278508951;
           "HEIC Converter" = 1294126402;
           "Structured" = 1499198946;
+          "Amphetamine" = 937984704;
+          "Dona" = 6748265175;
+          # "IP Scanner Ultra" = 404167677; # To buy
+
         };
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;
@@ -88,7 +121,7 @@
           "/Applications/Trello.app"
           "/System/Applications/Notes.app"
           "/System/Applications/Music.app"
-          "/Users/brambeirens/Applications/Autodesk Fusion.app"
+          "/Users/${config.system.primaryUser}/Applications/Autodesk Fusion.app"
           "/Applications/OrcaSlicer.app"
           "${pkgs.warp-terminal}/Applications/Warp.app"
           "/Applications/Sublime Text.app"
